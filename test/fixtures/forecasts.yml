@@ -1,0 +1,22 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the "{}" from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+recent:
+  zip_code: "20500"
+  temperature: 75.5
+  temp_min: 70.0
+  temp_max: 80.0
+  description: "sunny"
+  icon: "01d"
+  address: "White House"
+  created_at: <%= 15.minutes.ago %>
+
+old:
+  zip_code: "22201"
+  temperature: 72.0
+  description: "cloudy"
+  created_at: <%= 2.hours.ago %>

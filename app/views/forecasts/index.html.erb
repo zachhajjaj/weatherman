@@ -1,0 +1,29 @@
+<div class="row justify-content-center" data-controller="places">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title mb-4">Get Weather Forecast from Weatherman 👻</h5>
+        
+        <%= form_with url: forecasts_path, 
+                      data: { turbo_frame: "forecast_result" }, 
+                      class: "mb-4" do |f| %>
+          <div class="input-group">
+            <%= f.text_field :address, 
+                           class: "form-control", 
+                           placeholder: "Enter an address...",
+                           id: "address-input",
+                           autocomplete: "off" %>
+            <%= f.submit "Get Forecast", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+
+        <%= turbo_frame_tag "forecast_result" do %>
+          <% if @forecast %>
+            <%= render "forecast", forecast: @forecast %>
+          <% end %>
+        <% end %>
+        
+      </div>
+    </div>
+  </div>
+</div> 
