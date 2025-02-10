@@ -2,6 +2,10 @@
 
 ![Demo Screenshot](docs/demo.png)
 
+## Try it out!
+👉 [Live Demo](https://weatherman-a1eb1a0fb833.herokuapp.com/) 
+
+
 ## Features
 - Location search with Google Places Autocomplete
 - Current weather conditions
